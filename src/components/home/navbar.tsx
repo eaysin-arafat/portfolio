@@ -3,6 +3,7 @@
 import { links } from "@/data/navlinks";
 import useScrollSection from "@/hooks/useSectionScroll";
 import { styles } from "@/utils/cn";
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { BiMenu } from "react-icons/bi";
 
@@ -36,12 +37,12 @@ export default function Navbar() {
       ref={navRef}
     >
       <div className="px-5 2xl:pl-80 flex justify-between items-center py-2.5">
-        <a
+        <Link
           href="/"
           className="text-lg font-extrabold whitespace-nowrap text-black"
         >
           Eaysin Arafat
-        </a>
+        </Link>
 
         <button
           className="md:hidden"
