@@ -2,32 +2,203 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #f6f5ef;
+  color: #606060;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* START HOME */
+.templatemo-home {
+  /* background: url("/images/home-bg.jpg"); */
+  background-color: #ffffff;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  color: #5f5f5f;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+/* END HOME */
+
+/* START PORTFOLIO */
+.portfolio-overlay {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #eb5424;
+  color: #ffffff;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+  text-align: center;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+}
+
+.portfolio-thumb:hover .portfolio-overlay {
+  opacity: 0.8;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* FILTER CSS */
+.filter-wrapper li button {
+  color: #999999;
+  padding: 8px 17px;
+  display: block;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+}
+
+.filter-wrapper li button:focus,
+.filter-wrapper li button:hover,
+.filter-wrapper li button.selected {
+  background: #eb5424;
+  border-color: transparent;
+  color: #ffffff;
+}
+
+/* ISOTOPE BOX CSS */
+.fluid-img {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  display: block;
+  object-fit: fill;
+}
+/* END PORTFOLIO */
+
+/* START RESUME */
+.tm-info-label {
+  font-weight: bold;
+  display: inline-block;
+  width: 130px;
+}
+/* END RESUME */
+
+/* START ABOUT */
+.tm-about {
+  /* background: url("/svg/02.svg"); */
+  background-color: white;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+/* END ABOUT */
+
+/* START CONTACT */
+.form-control {
+  background: transparent;
+  border: 1px solid #666;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.form-control:focus,
+.form-control:hover {
+  background: white;
+  color: black;
+}
+
+.overlay {
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* END CONTACT */
+
+@layer components {
+  .nav {
+    @apply text-black hover:text-orangeColor transition-all tracking-widest;
+  }
+
+  .section-container {
+    @apply px-5 md:px-10 2xl:px-80;
+  }
+
+  .section-padding {
+    @apply py-16 sm:pt-24 md:pt-28;
+  }
+
+  .portfolio-item-title {
+    @apply font-bold mt-2.5 uppercase;
+  }
+
+  .portfolio-thumb {
+    @apply font-bold m-0 relative;
+  }
+
+  .main-btn {
+    @apply duration-500 ease-in bg-orangeColor text-white rounded-sm text-xs font-semibold py-1.5 px-4 hover:bg-white hover:text-orangeColor hover:border-orangeColor border border-transparent;
+  }
+
+  .input_error {
+    @apply text-red-600 leading-[125%] font-normal text-[12px] 2xl:text-[13px] mt-1 ms-[2px];
   }
 }
+
+@media screen and (max-device-width: 1024px) {
+  .templatemo-home {
+    background-attachment: scroll;
+  }
+}
+
+/* START MEDIA 980 */
+@media screen and (max-width: 980px) {
+  .portfolio-overlay {
+    padding-top: 10px;
+  }
+}
+
+/* END MEDIA 980 */
+@media screen and (max-width: 767px) {
+  .tm-home-title {
+    font-size: 40px;
+  }
+}
+
+/* START MEDIA 360 */
+@media screen and (max-width: 360px) {
+  .navbar-default .navbar-brand {
+    padding-top: 2px;
+  }
+}
+/* END MEDIA 360 */
