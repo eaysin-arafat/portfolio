@@ -13,32 +13,34 @@ export default function Resume() {
             className="pb-7 !text-start !text-5xl"
           />
 
-          <p>
-            <span className="tm-info-label">Name</span> Eaysin Arafat
-          </p>
-          <p>
-            <span className="tm-info-label">Birthday</span> February 03, 1998
-          </p>
-          <p>
-            <span className="tm-info-label">Address</span> Sayed Nagar, East
-            Vatara, Gulshan, Dhaka 1212
-          </p>
-          <p>
-            <span className="tm-info-label">Phone</span> +880 164 226078
-          </p>
-          <p>
-            <span className="tm-info-label">Email</span> eaysinarafat@gmail.com
-          </p>
-
-          <p>
-            <span className="tm-info-label">My Resume</span>{" "}
-            <a
-              href={personal?.resumeLink}
-              className="text-orangeColor underline text-sm"
-            >
-              Click here
-            </a>
-          </p>
+          <div className="space-y-2 md:space-y-0">
+            <p className="tm-parant-label">
+              <span className="tm-info-label">Name</span> Eaysin Arafat
+            </p>
+            <p className="tm-parant-label">
+              <span className="tm-info-label">Birthday</span> February 03, 1998
+            </p>
+            <p className="tm-parant-label">
+              <span className="tm-info-label">Address</span> Sayed Nagar, East
+              Vatara, Gulshan, Dhaka 1212
+            </p>
+            <p className="tm-parant-label">
+              <span className="tm-info-label">Phone</span> +880 164 226078
+            </p>
+            <p className="tm-parant-label">
+              <span className="tm-info-label">Email</span>{" "}
+              eaysinarafat@gmail.com
+            </p>
+            <p className="tm-parant-label">
+              <span className="tm-info-label">My Resume</span>{" "}
+              <a
+                href={personal?.resumeLink}
+                className="text-orangeColor underline text-sm"
+              >
+                Click here
+              </a>
+            </p>
+          </div>
         </div>
 
         <div>
@@ -47,9 +49,9 @@ export default function Resume() {
             className="pb-7 !text-start !text-5xl"
           />
 
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-2 md:gap-1">
             {skills?.map((skills, index) => (
-              <p key={index}>
+              <p key={index} className="flex md:block flex-col gap-1">
                 <span className="text-sm font-bold inline-block w-44">
                   {skills?.name}
                 </span>{" "}

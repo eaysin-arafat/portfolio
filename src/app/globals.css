@@ -58,14 +58,6 @@ body {
 }
 /* END PORTFOLIO */
 
-/* START RESUME */
-.tm-info-label {
-  font-weight: bold;
-  display: inline-block;
-  width: 130px;
-}
-/* END RESUME */
-
 /* START ABOUT */
 .tm-about {
   /* background: url("/svg/02.svg"); */
@@ -127,6 +119,14 @@ body {
 
   .main-btn {
     @apply duration-500 ease-in bg-orangeColor text-white rounded-sm text-xs font-semibold py-1.5 px-4 hover:bg-white hover:text-orangeColor hover:border-orangeColor border border-transparent;
+  }
+
+  .tm-parant-label {
+    @apply flex md:block flex-col;
+  }
+
+  .tm-info-label {
+    @apply font-bold inline-block w-[130px];
   }
 
   .input_error {
