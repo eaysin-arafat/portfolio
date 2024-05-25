@@ -79,7 +79,7 @@ export default function Portfolio() {
             </li>
           </ul>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-4">
             {filteredPortfolio?.map((item, index) => (
               <div
                 key={index}
