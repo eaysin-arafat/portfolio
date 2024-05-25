@@ -22,6 +22,7 @@ const Modal = ({ children, handleClose, isOpen, setOpenModal }: Props) => {
   useEffect(() => {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   useEffect(() => {
@@ -59,7 +60,7 @@ const Modal = ({ children, handleClose, isOpen, setOpenModal }: Props) => {
         </div>
         <div
           ref={navRef}
-          className="absolute h-[89%] top-16 right-0 overflow-auto pb-4"
+          className="absolute h-[87%] top-16 right-0 overflow-auto pb-4"
         >
           {children}
         </div>
