@@ -22,7 +22,7 @@ export default function HomePage() {
               together. Thank you.
             </p>
             <a
-              href="#work"
+              href="#about"
               className="duration-500 ease-in bg-orangeColor text-white rounded-sm text-lg font-semibold py-3 px-8 hover:bg-white hover:text-orangeColor hover:border-orangeColor border border-transparent"
             >
               Lets Begin

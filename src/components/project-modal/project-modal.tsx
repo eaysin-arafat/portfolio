@@ -121,13 +121,17 @@ export default function PortfolioModal({ projectId }: PortfolioModalProps) {
             </div>
 
             <div className="">
-              <h2 className="font-extrabold uppercase text-black">Designer</h2>{" "}
+              <h2 className="font-extrabold uppercase text-black">Author</h2>{" "}
               <span className="text-sm">Eaysin Arafat</span>
             </div>
 
             <div className="">
               <h2 className="font-extrabold uppercase text-black">Date</h2>{" "}
-              <span className="text-sm">{project?.date}</span>
+              <span className="text-sm">
+                {project?.date
+                  ? project?.date
+                  : "Under Development & Open for Contribution"}
+              </span>
             </div>
 
             <div className="">
