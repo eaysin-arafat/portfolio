@@ -2,14 +2,19 @@
 
 import Image from "next/image";
 import Heading from "../core/heading";
-import Link from "next/link";
 import { portfolio } from "@/data/portfolio";
 import { useState } from "react";
+import Modal from "../core/modal/modal";
+import PortfolioModal from "../project-modal/project-modal";
 
 type Category = "ALL" | "REACTJS" | "NEXTJS" | "LIBRARY";
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState<Category>("ALL");
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
+    null
+  );
 
   // Filter the portfolio items based on the selected category
   const filteredPortfolio = portfolio.filter((item) => {
@@ -17,10 +22,19 @@ export default function Portfolio() {
     return item.category === selectedCategory;
   });
 
+  const handleOpenModal = (projectId: number) => {
+    setSelectedProjectId(projectId);
+    setOpenModal(true);
+  };
+
+  const handleClose = () => {
+    setOpenModal(false);
+  };
+
   return (
     <section
       id="projects"
-      className="section-content px-5 pb-24 section-padding bg-white"
+      className="section-content section-container pb-24 section-padding bg-white"
     >
       <div className="">
         <Heading title={{ lastText: "Projects" }} className="!pb-11" />
@@ -65,10 +79,9 @@ export default function Portfolio() {
             </li>
           </ul>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-4">
             {filteredPortfolio?.map((item, index) => (
-              <Link
-                href={`${item?.id}`}
+              <div
                 key={index}
                 className="portfolio-thumb cursor-pointer border border-gray-200"
               >
@@ -81,21 +94,34 @@ export default function Portfolio() {
                     height={920}
                   />
                 ) : (
-                  <div className="flex flex-col items-center justify-center min-h-[200px] md:h-full mt-1 text-center px-1">
+                  <div className="flex flex-col justify-center w-full h-full px-10 text-center min-h-[200px]">
                     <h3 className="portfolio-item-title">{item?.title}</h3>
                     <p>{item?.subtitle}</p>
                   </div>
                 )}
 
-                <div className="portfolio-overlay">
+                <div
+                  className="absolute inset-0 flex flex-col justify-center bg-[#eb5424] text-white w-full h-full px-10 text-center opacity-0 transition-opacity duration-400 ease-in-out transform scale-95 hover:opacity-80 hover:scale-100"
+                  onClick={() => handleOpenModal(item?.id)}
+                >
                   <h3 className="portfolio-item-title">{item?.title}</h3>
                   <p>{item?.subtitle}</p>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
       </div>
+
+      {openModal && (
+        <Modal
+          handleClose={handleClose}
+          isOpen={openModal}
+          setOpenModal={setOpenModal}
+        >
+          <PortfolioModal projectId={selectedProjectId} />
+        </Modal>
+      )}
     </section>
   );
 }

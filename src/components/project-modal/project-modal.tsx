@@ -12,18 +12,21 @@ import { portfolio } from "@/data/portfolio";
 import { styles } from "@/utils/cn";
 import { useRouter } from "next/navigation";
 
-export default function Portfolio({
-  params,
-}: {
-  params: { projectId: number };
-}) {
-  const { projectId } = params;
+type PortfolioModalProps = {
+  projectId: number | null; // Accept null as a valid value
+};
+
+export default function PortfolioModal({ projectId }: PortfolioModalProps) {
   const router = useRouter();
 
   const [currentImage, setCurrentImage] = React.useState<number>(0);
-  const [currentProject, setCurrentProject] = React.useState<number>(projectId);
-  const project = portfolio.find((p) => p.id === Number(projectId));
 
+  if (projectId === null) {
+    // Handle the case where projectId is null
+    return <div>Project ID not provided.</div>;
+  }
+
+  const project = portfolio[projectId];
   const goToPreviousImage = () => {
     const newIndex =
       (currentImage - 1 + (project?.image?.length || 0)) %
@@ -37,31 +40,24 @@ export default function Portfolio({
   };
 
   const goToPreviousProject = () => {
-    if (currentProject == 0) {
+    if (projectId == 0) {
       return router.push(`/${portfolio?.length - 1}`);
     }
-    return router.push(`/${Number(currentProject) - 1}`);
+    return router.push(`/${Number(projectId) - 1}`);
   };
 
   const goToNextProject = () => {
-    if (currentProject == portfolio?.length - 1) {
+    if (projectId == portfolio?.length - 1) {
       return router.push(`/${Number(0)}`);
     }
 
-    return router.push(`/${Number(currentProject) + 1}`);
+    return router.push(`/${Number(projectId) + 1}`);
   };
 
   return (
-    <section className="section-container pt-12 pb-5">
-      <Link
-        className="bg-white text-black px-6 py-2.5 border rounded-sm whitespace-nowrap font-medium"
-        href="/"
-      >
-        Go Back
-      </Link>
-
+    <section className="px-5 md:px-8 pt-0 pb-0">
       <div>
-        <h1 className="!text-start font-bold tracking-tight !py-8 !pt-11 text-5xl text-black">
+        <h1 className="!text-start font-bold tracking-tight !pb-8 text-5xl text-black">
           {project?.title}
         </h1>
 
@@ -100,14 +96,14 @@ export default function Portfolio({
             {project?.subtitle}
           </h1>
 
-          <p className="pt-4 font-light">
-            {project?.description?.map((desc) => (
-              <>
+          <div className="pt-4 font-light">
+            {project?.description?.map((desc, index) => (
+              <React.Fragment key={index}>
                 <p>{desc}</p>
                 <br />
-              </>
+              </React.Fragment>
             ))}
-          </p>
+          </div>
 
           <div className="pt-4 flex flex-col gap-1">
             <h2 className="font-extrabold text-sm uppercase text-black">
@@ -118,7 +114,7 @@ export default function Portfolio({
             </span>
           </div>
 
-          <div className="pt-6 pb-3 flex flex-col md:flex-row gap-4 md:gap-20">
+          <div className="pt-6 flex flex-col md:flex-row gap-4 md:gap-20">
             <div className="">
               <h2 className="font-extrabold uppercase text-black">Client</h2>{" "}
               <span className="text-sm">{project?.client}</span>
@@ -154,24 +150,6 @@ export default function Portfolio({
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="flex justify-between pt-4 pb-1">
-        <button
-          onClick={goToPreviousProject}
-          className={styles("text-orangeColor font-medium flex")}
-          disabled={currentProject == 0}
-        >
-          Prev Project
-        </button>
-
-        <button
-          onClick={goToNextProject}
-          className={styles("text-orangeColor font-medium flex")}
-          disabled={currentProject == portfolio?.length - 1}
-        >
-          Next Project
-        </button>
       </div>
     </section>
   );

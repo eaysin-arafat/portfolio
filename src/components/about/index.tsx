@@ -3,8 +3,6 @@ import Heading from "../core/heading";
 import Resume from "./resume";
 
 export default function About() {
-  console.log("Hello About");
-
   return (
     <section id="about" className="section-content section-padding !pb-0">
       <Resume />
