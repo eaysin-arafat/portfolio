@@ -23,8 +23,8 @@ export const portfolio: Portfolio = [
     date: "March 15, 2024",
     category: "REACTJS",
     description: [
-      "Helpdesk is a robust system issue tracking platform designed to streamline the process of reporting, managing, and resolving system issues efficiently. With Helpdesk, users can easily report system issues they encounter, while support staff can effectively track, prioritize, and resolve these issues in a timely manner. The platform provides a user-friendly interface for both users and support staff, ensuring seamless communication and collaboration throughout the issue resolution process.",
-      "Developed a problem management system adaptable for various projects or institutions Implemented role-based relationships to facilitate efficient problem resolution, ensuring the right individuals have appropriate access levels. Helpdesk features a secure user authentication system, allowing users to register, log in, and manage their accounts securely. This ensures that only authorized users can access the platform and report system issues. Users can create tickets to report system issues effortlessly. The ticket creation process is user-friendly, allowing users to provide detailed descriptions, screenshots, and other relevant information to help support staff understand and address the reported issues effectively.",
+      "HelpDesk is a robust system issue tracking platform designed to streamline the process of reporting, managing, and resolving system issues efficiently. With HelpDesk, users can easily report system issues they encounter, while support staff can effectively track, prioritize, and resolve these issues in a timely manner. The platform provides a user-friendly interface for both users and support staff, ensuring seamless communication and collaboration throughout the issue resolution process.",
+      "Developed a problem management system adaptable for various projects or institutions Implemented role-based relationships to facilitate efficient problem resolution, ensuring the right individuals have appropriate access levels. HelpDesk features a secure user authentication system, allowing users to register, log in, and manage their accounts securely. This ensures that only authorized users can access the platform and report system issues. Users can create tickets to report system issues effortlessly. The ticket creation process is user-friendly, allowing users to provide detailed descriptions, screenshots, and other relevant information to help support staff understand and address the reported issues effectively.",
       "Support staff can manage tickets efficiently through the intuitive support dashboard. They can view, assign, prioritize, and track tickets based on their status and severity, ensuring that critical issues are addressed promptly.",
       "Support staff can communicate with users, provide updates, and resolve reported issues directly within the platform. This streamlines the issue resolution process and ensures clear communication between users and support staff throughout the entire process.",
       "Admins have access to administrative features, allowing them to manage users, configure system settings, and monitor system performance. This ensures that the platform operates smoothly and efficiently.",
@@ -225,7 +225,7 @@ export const portfolio: Portfolio = [
     subtitle:
       "A modern JavaScript utility library delivering modularity, performance & extras",
     client: "Personal Project",
-    date: "",
+    date: "--",
     category: "LIBRARY",
     description: [
       "A modern JavaScript utility library delivering modularity, performance & extras JavaScript library which provides utility functions for common programming tasks using the functional programming paradigm. It can be broken down into several main areas: Utilities, Function, String, Array, Collection, Object, Sequence.",

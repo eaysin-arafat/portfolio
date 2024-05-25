@@ -121,7 +121,7 @@ body {
     @apply duration-500 ease-in bg-orangeColor text-white rounded-sm text-xs font-semibold py-1.5 px-4 hover:bg-white hover:text-orangeColor hover:border-orangeColor border border-transparent;
   }
 
-  .tm-parant-label {
+  .tm-parent-label {
     @apply flex md:block flex-col;
   }
 

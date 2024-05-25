@@ -14,24 +14,24 @@ export default function Resume() {
           />
 
           <div className="space-y-2 md:space-y-0">
-            <p className="tm-parant-label">
+            <p className="tm-parent-label">
               <span className="tm-info-label">Name</span> Eaysin Arafat
             </p>
-            <p className="tm-parant-label">
+            <p className="tm-parent-label">
               <span className="tm-info-label">Birthday</span> February 03, 1998
             </p>
-            <p className="tm-parant-label">
+            <p className="tm-parent-label">
               <span className="tm-info-label">Address</span> Sayed Nagar, East
               Vatara, Gulshan, Dhaka 1212
             </p>
-            <p className="tm-parant-label">
+            <p className="tm-parent-label">
               <span className="tm-info-label">Phone</span> +880 164 226078
             </p>
-            <p className="tm-parant-label">
+            <p className="tm-parent-label">
               <span className="tm-info-label">Email</span>{" "}
               eaysinarafat@gmail.com
             </p>
-            <p className="tm-parant-label">
+            <p className="tm-parent-label">
               <span className="tm-info-label">My Resume</span>{" "}
               <a
                 href={personal?.resumeLink}
@@ -45,7 +45,7 @@ export default function Resume() {
 
         <div>
           <Heading
-            title={{ lastText: "Skils" }}
+            title={{ lastText: "Skills" }}
             className="pb-7 !text-start !text-5xl"
           />
 

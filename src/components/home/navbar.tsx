@@ -1,6 +1,6 @@
 "use client";
 
-import { links } from "@/data/navlinks";
+import { links } from "@/data/nav-links";
 import useScrollSection from "@/hooks/useSectionScroll";
 import { styles } from "@/utils/cn";
 import Link from "next/link";

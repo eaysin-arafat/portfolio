@@ -1,5 +1,5 @@
 "use client";
-import { accounts } from "@/data/account_url";
+import { accounts } from "@/data/account-url";
 import React from "react";
 import { BsStackOverflow } from "react-icons/bs";
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
