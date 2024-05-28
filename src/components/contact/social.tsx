@@ -31,14 +31,12 @@ export default function Social() {
             href={item?.url}
             key={index}
             style={{ backgroundColor: item?.bgColor }}
-            className={`bg-${item?.bgColor} flex items-start gap-3 py-16 px-10 hover:!bg-bgColor hover:text-black transition duration-1000 ease-in-out`}
+            className={`bg-${item?.bgColor} flex items-start gap-3 py-16 px-10 hover:bg-bgColor hover:text-textColor transition duration-1000 ease-in-out`}
           >
-            <div className="text-textColor">{item?.icon}</div>
+            <div className="text-white">{item?.icon}</div>
             <div className="">
-              <h4 className="uppercase font-bold text-textColor">
-                Follow me on
-              </h4>
-              <h3 className="capitalize font-semibold text-textColor">
+              <h4 className="uppercase font-bold text-white">Follow me on</h4>
+              <h3 className="capitalize font-semibold text-white">
                 {item?.name}
               </h3>
             </div>

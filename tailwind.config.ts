@@ -25,6 +25,7 @@ const config: Config = {
         linkedinBg: "var(--linkedinBg)",
         facebookBg: "var(--facebookBg)",
         overlayColor: "var(--overlayColor)",
+        socialTextColor: "var(--socialTextColor)",
       },
     },
   },
