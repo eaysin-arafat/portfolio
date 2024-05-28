@@ -57,7 +57,7 @@ export default function PortfolioModal({ projectId }: PortfolioModalProps) {
   return (
     <section className="px-5 md:px-8 pt-0 pb-0">
       <div>
-        <h1 className="!text-start font-bold tracking-tight !pb-8 text-5xl text-black">
+        <h1 className="!text-start font-bold tracking-tight !pb-8 text-5xl text-textColor">
           {project?.title}
         </h1>
 
@@ -92,11 +92,11 @@ export default function PortfolioModal({ projectId }: PortfolioModalProps) {
         )}
 
         <div className={styles("pt-8", { "!pt-2": !project?.image?.length })}>
-          <h1 className="font-bold text-2xl text-black capitalize">
+          <h1 className="font-bold text-2xl text-textColor capitalize">
             {project?.subtitle}
           </h1>
 
-          <div className="pt-4 font-light">
+          <div className="pt-4 font-light text-grayTextColor">
             {project?.description?.map((desc, index) => (
               <React.Fragment key={index}>
                 <p>{desc}</p>
@@ -106,28 +106,34 @@ export default function PortfolioModal({ projectId }: PortfolioModalProps) {
           </div>
 
           <div className="pt-4 flex flex-col gap-1">
-            <h2 className="font-extrabold text-sm uppercase text-black">
+            <h2 className="font-extrabold text-sm uppercase text-textColor">
               Technologies
             </h2>{" "}
-            <span className="font-medium text-sm">
+            <span className="font-medium text-sm text-grayTextColor">
               {project?.technologies?.map((tech) => tech)?.join(", ")}
             </span>
           </div>
 
           <div className="pt-6 flex flex-col md:flex-row gap-4 md:gap-20">
             <div className="">
-              <h2 className="font-extrabold uppercase text-black">Client</h2>{" "}
-              <span className="text-sm">{project?.client}</span>
+              <h2 className="font-extrabold uppercase text-textColor">
+                Client
+              </h2>{" "}
+              <span className="text-sm text-grayTextColor">
+                {project?.client}
+              </span>
             </div>
 
             <div className="">
-              <h2 className="font-extrabold uppercase text-black">Author</h2>{" "}
-              <span className="text-sm">Eaysin Arafat</span>
+              <h2 className="font-extrabold uppercase text-textColor">
+                Author
+              </h2>{" "}
+              <span className="text-sm text-grayTextColor">Eaysin Arafat</span>
             </div>
 
             <div className="">
-              <h2 className="font-extrabold uppercase text-black">Date</h2>{" "}
-              <span className="text-sm">
+              <h2 className="font-extrabold uppercase text-textColor">Date</h2>{" "}
+              <span className="text-sm text-grayTextColor">
                 {project?.date
                   ? project?.date
                   : "Under Development & Open for Contribution"}
@@ -135,18 +141,26 @@ export default function PortfolioModal({ projectId }: PortfolioModalProps) {
             </div>
 
             <div className="">
-              <h2 className="font-extrabold uppercase text-black">Resource</h2>{" "}
+              <h2 className="font-extrabold uppercase text-textColor">
+                Resource
+              </h2>{" "}
               <div className="text-sm flex items-center gap-4">
-                <Link href={project?.githubLink || ""} className="text-black">
+                <Link
+                  href={project?.githubLink || ""}
+                  className="text-textColor"
+                >
                   <FaGithub size={19} />
                 </Link>
 
-                <Link href={project?.liveLink || ""}>
+                <Link className="text-textColor" href={project?.liveLink || ""}>
                   <FaExternalLinkAlt size={17} />
                 </Link>
 
                 {project?.externalProjectDetailLink && (
-                  <Link href={project?.externalProjectDetailLink}>
+                  <Link
+                    className="text-textColor"
+                    href={project?.externalProjectDetailLink}
+                  >
                     <FaYoutube size={21} />
                   </Link>
                 )}

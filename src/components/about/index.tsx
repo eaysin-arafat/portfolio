@@ -1,16 +1,18 @@
 "use client";
-import Heading from "../core/heading";
+import Heading from "../core/heading/heading";
 import Resume from "./resume";
 
 export default function About() {
   return (
-    <section id="about" className="section-content section-padding !pb-0">
+    <section
+      id="about"
+      className="section-content section-padding bg-bgColor !pb-0"
+    >
       <Resume />
 
-      <section className="tm-about section-container">
-        {/* <div></div> */}
+      <section className="pt-[50px] pb-[100px] section-container bg-bgWhiteColor">
         <div>
-          <div className="text-[#303030] py-3 pt-6">
+          <div className="text-grayTextColor py-3 pt-6">
             <Heading
               title={{ firstText: "I'm", lastText: "React Developer" }}
               className="!text-start !pb-1.5 !text-[45px]"
@@ -21,7 +23,7 @@ export default function About() {
               <span className="font-medium">Frontend Development.</span>
             </h5>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2 text-grayTextColor">
             <p>
               In my initial job, I contributed to the development of various
               websites using React JS skills while working part-time at a

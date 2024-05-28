@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Heading from "../core/heading";
+import Heading from "../core/heading/heading";
 import { portfolio } from "@/data/portfolio";
 import { useState } from "react";
 import Modal from "../core/modal/modal";
@@ -34,7 +34,7 @@ export default function Portfolio() {
   return (
     <section
       id="projects"
-      className="section-content section-container pb-24 section-padding bg-white"
+      className="section-content section-container pb-24 section-padding bg-bgWhiteColor"
     >
       <div className="">
         <Heading title={{ lastText: "Projects" }} className="!pb-11" />
@@ -83,7 +83,7 @@ export default function Portfolio() {
             {filteredPortfolio?.map((item, index) => (
               <div
                 key={index}
-                className="portfolio-thumb cursor-pointer border border-gray-200"
+                className="font-bold m-0 relative cursor-pointer border border-borderColor"
               >
                 {item?.image?.length ? (
                   <Image
@@ -95,17 +95,21 @@ export default function Portfolio() {
                   />
                 ) : (
                   <div className="flex flex-col justify-center w-full h-full px-10 text-center min-h-[200px]">
-                    <h3 className="portfolio-item-title">{item?.title}</h3>
-                    <p>{item?.subtitle}</p>
+                    <h3 className="font-bold mt-2.5 uppercase text-grayTextColor">
+                      {item?.title}
+                    </h3>
+                    <p className="text-grayTextColor">{item?.subtitle}</p>
                   </div>
                 )}
 
                 <div
-                  className="absolute inset-0 flex flex-col justify-center bg-[#eb5424] text-white w-full h-full px-10 text-center opacity-0 transition-opacity duration-400 ease-in-out transform scale-95 hover:opacity-80 hover:scale-100"
+                  className="absolute inset-0 flex flex-col justify-center bg-[#eb5424] w-full h-full px-10 text-center opacity-0 transition-opacity duration-400 ease-in-out transform scale-95 hover:opacity-80 hover:scale-100"
                   onClick={() => handleOpenModal(item?.id)}
                 >
-                  <h3 className="portfolio-item-title">{item?.title}</h3>
-                  <p>{item?.subtitle}</p>
+                  <h3 className="font-bold mt-2.5 uppercase text-grayTextColor text-white">
+                    {item?.title}
+                  </h3>
+                  <p className="text-[#f1f5f9]">{item?.subtitle}</p>
                 </div>
               </div>
             ))}

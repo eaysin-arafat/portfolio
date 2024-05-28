@@ -48,9 +48,9 @@ const Modal = ({ children, handleClose, isOpen, setOpenModal }: Props) => {
   }, [isOpen]);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-      <div className="bg-white px-4 rounded-lg shadow-lg h-5/6 w-full mx-5 md:mx-10 2xl:mx-80 relative">
-        <div className="w-full flex items-center justify-end bg-white">
+    <div className="fixed inset-0 pt-10 flex items-center justify-center z-50 bg-[#27272a] bg-opacity-50">
+      <div className="bg-bgWhiteColor px-4 rounded-sm shadow-lg h-5/6 w-full mx-5 md:mx-10 2xl:mx-80 relative border border-borderColor ">
+        <div className="w-full flex items-center justify-end">
           <button
             className="mt-4 px-3 py-1 bg-orangeColor font-medium text-white rounded "
             onClick={handleClose}

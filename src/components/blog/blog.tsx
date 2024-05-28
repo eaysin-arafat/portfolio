@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Heading from "../core/heading";
+import Heading from "../core/heading/heading";
 import { blogs } from "@/data/blog";
 
 export default function Blog() {
   return (
     <section
       id="blogs"
-      className="section-content section-container md:py-44 md:pb-28 section-padding bg-white"
+      className="section-content section-container section-padding bg-bgWhiteColor"
     >
       <Heading title={{ lastText: "Blogs" }} className="md:pb-36" />
 
@@ -17,7 +17,7 @@ export default function Blog() {
               src="/blogs/html.png"
               className="fluid-img object-fill"
               alt="portfolio img"
-              height={1000}
+              height={250}
               width={439}
             />
             <div className="absolute top-0 p-6 pb-8 flex flex-col justify-between h-full w-full overlay z-0">

@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useRef, useState } from "react";
-import Heading from "../core/heading";
-import emailjs from "@emailjs/browser";
-import toast from "react-hot-toast";
+import Heading from "../core/heading/heading";
 import Input from "../core/form-elements/Input";
 import Textarea from "../core/form-elements/Textarea";
-import useContact from "./useContact";
+import useContact from "../../hooks/useContact";
 import Social from "./social";
 
 export default function Contact() {
@@ -16,7 +13,7 @@ export default function Contact() {
     <>
       <section
         id="contact"
-        className="section-content section-container section-padding pb-20"
+        className="section-content section-container section-padding bg-bgColor pb-20"
       >
         <div className="">
           <Heading title={{ firstText: "drop", lastText: "me a line" }} />
@@ -56,7 +53,7 @@ export default function Contact() {
             />
 
             <button
-              className="form-control whitespace-nowrap text-center text-sm px-2 py-1.5 md:mx-56"
+              className="form-control whitespace-nowrap text-center text-sm px-2 py-1.5 md:mx-56 text-textColor"
               type="submit"
             >
               SHOOT MESSAGE

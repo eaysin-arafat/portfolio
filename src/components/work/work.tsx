@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../core/heading";
+import Heading from "../core/heading/heading";
 
 export default function Work() {
   return (

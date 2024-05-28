@@ -225,7 +225,7 @@ export const portfolio: Portfolio = [
     subtitle:
       "A modern JavaScript utility library delivering modularity, performance & extras",
     client: "Personal Project",
-    date: "--",
+    date: "Under Development & Open for Contribution",
     category: "LIBRARY",
     description: [
       "A modern JavaScript utility library delivering modularity, performance & extras JavaScript library which provides utility functions for common programming tasks using the functional programming paradigm. It can be broken down into several main areas: Utilities, Function, String, Array, Collection, Object, Sequence.",

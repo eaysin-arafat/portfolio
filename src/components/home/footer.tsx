@@ -1,4 +1,5 @@
 "use client";
+
 import { accounts } from "@/data/account-url";
 import React from "react";
 import { BsStackOverflow } from "react-icons/bs";
@@ -8,10 +9,12 @@ import { SiLeetcode } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <section className="section-container py-11 md:py-10 section-padding bg-white">
+    <section className="section-container py-11 md:py-10 section-padding !pt-28 bg-bgWhiteColor">
       <div className="flex items-center justify-between">
-        <p>Eaysin Arafat</p>
-        <div className="flex gap-1 md:gap-3">
+        <a href="#home" className="text-textColor font-bold">
+          Eaysin Arafat
+        </a>
+        <div className="flex gap-1 md:gap-3 text-grayTextColor">
           <a href={accounts?.github} target="_blank">
             <FaGithub size={23} />
           </a>

@@ -1,6 +1,6 @@
 import About from "@/components/about";
 import Blog from "@/components/blog/blog";
-import Contact from "@/components/contact/contact";
+import Contact from "@/components/contact";
 import Experience from "@/components/experience/experience";
 import Footer from "@/components/home/footer";
 import HomePage from "@/components/home/home";

@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../core/heading";
+import Heading from "../core/heading/heading";
 import { skills } from "@/data/skill";
 import { personal } from "@/data/personal";
 
@@ -36,6 +36,7 @@ export default function Resume() {
               <a
                 href={personal?.resumeLink}
                 className="text-orangeColor underline text-sm"
+                target="_blank"
               >
                 Click here
               </a>
@@ -51,8 +52,11 @@ export default function Resume() {
 
           <div className="flex flex-col gap-2 md:gap-1">
             {skills?.map((skills, index) => (
-              <p key={index} className="flex md:block flex-col gap-1">
-                <span className="text-sm font-bold inline-block w-44">
+              <p
+                key={index}
+                className="flex md:block flex-col gap-1 text-textColor"
+              >
+                <span className="text-sm font-bold inline-block w-44 text-grayTextColor">
                   {skills?.name}
                 </span>{" "}
                 {skills?.skills?.map((skill) => skill).join(", ")}

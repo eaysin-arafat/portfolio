@@ -24,7 +24,7 @@ export default function Social() {
     },
   ];
   return (
-    <section id="social" className="px-1.5 pt-10">
+    <section id="social" className="px-1.5 pt-10 bg-bgColor">
       <div className="grid md:grid-cols-3 text-white">
         {socialData.map((item, index) => (
           <Link
@@ -33,10 +33,14 @@ export default function Social() {
             style={{ backgroundColor: item?.bgColor }}
             className={`bg-${item?.bgColor} flex items-start gap-3 py-16 px-10 hover:!bg-bgColor hover:text-black transition duration-1000 ease-in-out`}
           >
-            <div className="">{item?.icon}</div>
+            <div className="text-textColor">{item?.icon}</div>
             <div className="">
-              <h4 className="uppercase font-bold">Follow me on</h4>
-              <h3 className="capitalize font-semibold">{item?.name}</h3>
+              <h4 className="uppercase font-bold text-textColor">
+                Follow me on
+              </h4>
+              <h3 className="capitalize font-semibold text-textColor">
+                {item?.name}
+              </h3>
             </div>
           </Link>
         ))}

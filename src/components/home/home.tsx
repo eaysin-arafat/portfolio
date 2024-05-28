@@ -2,18 +2,18 @@ export default function HomePage() {
   return (
     <section
       id="home"
-      className="section-content templatemo-home !bg-[#ffffff] "
+      className="section-content flex items-center justify-center text-center h-screen bg-bgWhiteColor"
     >
       <div className="mx-auto px-4">
         <div className="flex flex-row items-center justify-center">
           <div className="md:w-2/3 sm:w-5/6">
-            <h1 className="text-[40px] md:text-[60px] font-extrabold uppercase">
+            <h1 className="text-[40px] md:text-[60px] font-extrabold uppercase text-grayTextColor">
               Eaysin Arafat{" "}
             </h1>
             <h2 className="text-orangeColor text-[20px] md:text-[28px] pb-5 font-semibold tracking-normal uppercase mt-[-5px]">
               Frontend Developer
             </h2>
-            <p className="text-base text-black md:text-xl text-center mb-10 font-extralight">
+            <p className="text-base text-textColor md:text-xl text-center mb-10 font-extralight">
               I am <strong>React Developer</strong>. Built highly{" "}
               <strong>Responsive</strong> and{" "}
               <strong>Performant user interfaces</strong> for complex{" "}
