@@ -27,4 +27,13 @@ export const experience: Experience = [
     description:
       "I've engaged in frontend development across multiple projects, employing React.js as the primary framework. Within these endeavors, I've played a pivotal role in contributing to various website projects, leveraging my expertise in React.js to enhance functionality and user experience. My focus remains steadfast on delivering high-quality UI/UX designs while optimizing performance for optimal user satisfaction.",
   },
+  {
+    id: 3,
+    date: "June 2024 - Present",
+    role: "Junior React Developer",
+    company: "Blackrock IT Solutions",
+    location: "Mesa, Arizona",
+    description:
+      "Currently contributing to the frontend development team at Blackrock IT Solutions, specializing in React.js development. Involved in building robust and user-centric web applications, focusing on creating exceptional user experiences through clean code and optimized performance.",
+  },
 ];

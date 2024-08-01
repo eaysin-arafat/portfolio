@@ -1,16 +1,16 @@
 "use client";
 
-import React from "react";
+import { portfolio } from "@/data/portfolio";
+import { styles } from "@/utils/cn";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import React from "react";
+import { FaExternalLinkAlt, FaGithub, FaYoutube } from "react-icons/fa";
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-import Link from "next/link";
-import { FaExternalLinkAlt, FaGithub, FaYoutube } from "react-icons/fa";
-import { portfolio } from "@/data/portfolio";
-import { styles } from "@/utils/cn";
-import { useRouter } from "next/navigation";
 
 type PortfolioModalProps = {
   projectId: number | null; // Accept null as a valid value
@@ -37,21 +37,6 @@ export default function PortfolioModal({ projectId }: PortfolioModalProps) {
   const goToNextImage = () => {
     const newIndex = (currentImage + 1) % (project?.image?.length || 1);
     setCurrentImage(newIndex);
-  };
-
-  const goToPreviousProject = () => {
-    if (projectId == 0) {
-      return router.push(`/${portfolio?.length - 1}`);
-    }
-    return router.push(`/${Number(projectId) - 1}`);
-  };
-
-  const goToNextProject = () => {
-    if (projectId == portfolio?.length - 1) {
-      return router.push(`/${Number(0)}`);
-    }
-
-    return router.push(`/${Number(projectId) + 1}`);
   };
 
   return (
@@ -145,16 +130,21 @@ export default function PortfolioModal({ projectId }: PortfolioModalProps) {
                 Resource
               </h2>{" "}
               <div className="text-sm flex items-center gap-4">
-                <Link
+                <a
                   href={project?.githubLink || ""}
+                  target="_blank"
                   className="text-textColor"
                 >
                   <FaGithub size={19} />
-                </Link>
+                </a>
 
-                <Link className="text-textColor" href={project?.liveLink || ""}>
+                <a
+                  className="text-textColor"
+                  href={project?.liveLink || ""}
+                  target="_blank"
+                >
                   <FaExternalLinkAlt size={17} />
-                </Link>
+                </a>
 
                 {project?.externalProjectDetailLink && (
                   <Link

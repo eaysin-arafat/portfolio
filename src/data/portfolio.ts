@@ -16,6 +16,24 @@ export type Portfolio = {
 export const portfolio: Portfolio = [
   {
     id: 0,
+    title: "React-form-interactions",
+    subtitle: "A React Form State and Validation Library",
+    client: "Personal Project",
+    date: "July 07, 2024 (Last Version)",
+    category: "LIBRARY",
+    description: [
+      "Developed a reusable React library (react-form-interactions) to simplify form state management and validation in React applications. Define comprehensive validation rules for form fields including required fields, minimum/maximum lengths, patterns, and more.",
+      "Easily extend with custom validation rules and behaviors tailored to specific application requirements. Designed for seamless integration with React applications using hooks and functional components.",
+      "Automatically manage and display error messages associated with form fields based on validation rules.",
+    ],
+    image: [],
+    technologies: ["TypeScript", "React"],
+    githubLink: "https://github.com/eaysin-arafat/react-form-interactions",
+    liveLink:
+      "https://www.npmjs.com/package/react-form-interactions?activeTab=readme",
+  },
+  {
+    id: 1,
     title: "Help Desk",
     subtitle:
       "The process of reporting, managing, and resolving system issues efficiently",
@@ -78,7 +96,7 @@ export const portfolio: Portfolio = [
     liveLink: "",
   },
   {
-    id: 1,
+    id: 2,
     title: "SmartCare Pro",
     subtitle:
       "Features to manage medical treatments, patient records, and doctor interactions",
@@ -166,7 +184,7 @@ export const portfolio: Portfolio = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Ecommarce Platform",
     subtitle:
       "an online destination where buyers shop for goods and sellers offer products and services.",
@@ -220,7 +238,7 @@ export const portfolio: Portfolio = [
     liveLink: "https://ecommarce-client.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "js-utility",
     subtitle:
       "A modern JavaScript utility library delivering modularity, performance & extras",
@@ -235,10 +253,10 @@ export const portfolio: Portfolio = [
     image: [],
     technologies: ["JavaScript"],
     githubLink: "https://github.com/eaysin-arafat/js-utility",
-    liveLink: "https://addons.mozilla.org/addon/wordy-birdy-scramble-game/",
+    liveLink: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "File Drive",
     subtitle: "a comprehensive file management platform",
     client: "Personal Project",
