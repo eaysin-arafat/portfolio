@@ -11,18 +11,8 @@ type Experience = {
 
 export const experience: Experience = [
   {
-    id: 1,
-    role: "Frontend Developer",
-    company: "Freelance Corner",
-    location: "Natun Bazar, Sadar, Mymensingh",
-    date: "October 2022 - April 2023",
-    website: "https://freelancecorner.com.bd/",
-    description:
-      "I utilized my expertise in front-end development to contribute significantly to multiple websites. These websites were constructed using React JS, a framework renowned for its versatility and efficiency. My role involved implementing various features and ensuring a seamless user experience across these platforms.",
-  },
-  {
     id: 2,
-    date: "May 2023 - March 2024",
+    date: "January 2023 - February 2024",
     role: "React Developer",
     website: "https://www.excelbd.com/",
     company: "Excel Technologies Ltd.",
@@ -32,12 +22,12 @@ export const experience: Experience = [
   },
   {
     id: 3,
-    date: "June 2024 - Present",
+    date: "March 2024 - August 2024",
     role: "React Developer",
     company: "Blackrock IT Solutions",
     website: "https://www.blackrockitsolutions.com/",
     location: "Mesa, Arizona",
     description:
-      "Currently contributing to the frontend development team at Blackrock IT Solutions, specializing in React.js development. Involved in building robust and user-centric web applications, focusing on creating exceptional user experiences through clean code and optimized performance.",
+      "Contributing to the frontend development team, specializing in React.js development. Involved in building robust and user-centric web applications, focusing on creating exceptional user experiences through clean code and optimized performance.",
   },
 ];
