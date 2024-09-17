@@ -24,7 +24,7 @@ export const experience: Experience = [
     id: 3,
     date: "March 2024 - August 2024",
     role: "React Developer",
-    company: "Blackrock IT Solutions",
+    company: "Blackrock IT Solutions (Contract)",
     website: "https://www.blackrockitsolutions.com/",
     location: "Mesa, Arizona",
     description:
