@@ -1,6 +1,6 @@
+import { blogs } from "@/data/blog";
 import Image from "next/image";
 import Heading from "../core/heading/heading";
-import { blogs } from "@/data/blog";
 
 export default function Blog() {
   return (
@@ -14,7 +14,7 @@ export default function Blog() {
         {blogs.map((blog, index) => (
           <div className="relative" key={index}>
             <Image
-              src="/blogs/html.png"
+              src={blog?.cover_image}
               className="fluid-img object-fill"
               alt="portfolio img"
               height={250}

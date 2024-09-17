@@ -13,7 +13,7 @@ export const blogs: Blog[] = [
     category: "React Performance Optimization",
     date: "Sep 18, 2024",
     title: "Optimizing Performance in a React Application: A Case Study",
-    cover_image: "",
+    cover_image: "../../public/blogs/03.png",
     blogUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgXaW6BKh9GjEUT_QJ8Q5S8KES90ZoiQhPOA&s",
   },
@@ -32,7 +32,7 @@ export const blogs: Blog[] = [
     category: "HTML",
     date: "Nov 22, 2023",
     title: "Markup Language and HTML",
-    cover_image: "https://via.placeholder.com/600x400",
+    cover_image: "../../public/blogs/html.png",
     blogUrl: "https://eaysin-arafat.hashnode.dev/markup-language-and-html",
   },
 ];
