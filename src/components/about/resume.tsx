@@ -1,7 +1,6 @@
-import React from "react";
-import Heading from "../core/heading/heading";
-import { skills } from "@/data/skill";
 import { personal } from "@/data/personal";
+import { skills } from "@/data/skill";
+import Heading from "../ui/heading/heading";
 
 export default function Resume() {
   return (
@@ -21,8 +20,8 @@ export default function Resume() {
               <span className="tm-info-label">Birthday</span> February 03, 1998
             </p>
             <p className="tm-parent-label">
-              <span className="tm-info-label">Address</span> Sayed Nagar, East
-              Vatara, Gulshan, Dhaka 1212
+              <span className="tm-info-label">Address</span> College Road,
+              Sadar, Mymensingh
             </p>
             <p className="tm-parent-label">
               <span className="tm-info-label">Phone</span> +880 164 226078

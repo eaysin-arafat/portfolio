@@ -1,13 +1,16 @@
+import { shortId } from "@/utils/generate-shortid";
+
 export type LinkType = {
+  id: string;
   title: string;
   url: string;
 }[];
 
 export const links: LinkType = [
-  { title: "Home", url: "home" },
-  { title: "About", url: "about" },
-  { title: "Experience", url: "experience" },
-  { title: "Projects", url: "projects" },
-  { title: "Contact Me", url: "contact" },
-  { title: "Blogs", url: "blogs" },
+  { id: shortId(), title: "Home", url: "home" },
+  { id: shortId(), title: "About", url: "about" },
+  { id: shortId(), title: "Experience", url: "experience" },
+  { id: shortId(), title: "Projects", url: "projects" },
+  { id: shortId(), title: "Contact Me", url: "contact" },
+  { id: shortId(), title: "Blogs", url: "blogs" },
 ];

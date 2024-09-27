@@ -1,5 +1,5 @@
 "use client";
-import Heading from "../core/heading/heading";
+import Heading from "../ui/heading/heading";
 import Resume from "./resume";
 
 export default function About() {

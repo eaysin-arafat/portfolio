@@ -1,9 +1,9 @@
 "use client";
 
-import Heading from "../core/heading/heading";
-import Input from "../core/form-elements/Input";
-import Textarea from "../core/form-elements/Textarea";
 import useContact from "../../hooks/useContact";
+import Input from "../ui/form-elements/Input";
+import Textarea from "../ui/form-elements/Textarea";
+import Heading from "../ui/heading/heading";
 import Social from "./social";
 
 export default function Contact() {

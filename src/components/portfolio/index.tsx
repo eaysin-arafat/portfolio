@@ -1,20 +1,18 @@
 "use client";
 
-import Image from "next/image";
-import Heading from "../core/heading/heading";
 import { portfolio } from "@/data/portfolio";
+import Image from "next/image";
 import { useState } from "react";
-import Modal from "../core/modal/modal";
 import PortfolioModal from "../project-modal/project-modal";
+import Heading from "../ui/heading/heading";
+import Modal from "../ui/modal/modal";
 
 type Category = "ALL" | "REACTJS" | "NEXTJS" | "LIBRARY";
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState<Category>("ALL");
   const [openModal, setOpenModal] = useState<boolean>(false);
-  const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
-    null
-  );
+  const [selectedProjectId, setSelectedProjectId] = useState<string>("");
 
   // Filter the portfolio items based on the selected category
   const filteredPortfolio = portfolio.filter((item) => {
@@ -22,10 +20,12 @@ export default function Portfolio() {
     return item.category === selectedCategory;
   });
 
-  const handleOpenModal = (projectId: number) => {
-    setSelectedProjectId(projectId);
+  const handleOpenModal = (id: string) => {
+    setSelectedProjectId(id);
     setOpenModal(true);
   };
+
+  console.log({ openModal });
 
   const handleClose = () => {
     setOpenModal(false);

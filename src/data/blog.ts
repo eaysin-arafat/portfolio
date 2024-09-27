@@ -1,5 +1,7 @@
+import { shortId } from "@/utils/generate-shortid";
+
 export interface Blog {
-  id: number;
+  id: string;
   category: string;
   title: string;
   cover_image: string;
@@ -9,7 +11,7 @@ export interface Blog {
 
 export const blogs: Blog[] = [
   {
-    id: 3,
+    id: shortId(),
     category: "React Performance Optimization",
     date: "Sep 18, 2024",
     title: "Optimizing Performance in a React Application: A Case Study",
@@ -18,7 +20,7 @@ export const blogs: Blog[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgXaW6BKh9GjEUT_QJ8Q5S8KES90ZoiQhPOA&s",
   },
   {
-    id: 2,
+    id: shortId(),
     category: "Performance Optimization",
     date: "Sep 10, 2024",
     title:
@@ -28,7 +30,7 @@ export const blogs: Blog[] = [
       "https://eaysin-arafat.hashnode.dev/case-study-building-react-form-interactions-a-high-performance-react-library-for-form-state-and-validation",
   },
   {
-    id: 1,
+    id: shortId(),
     category: "HTML",
     date: "Nov 22, 2023",
     title: "Markup Language and HTML",

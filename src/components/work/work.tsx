@@ -1,5 +1,4 @@
-import React from "react";
-import Heading from "../core/heading/heading";
+import Heading from "../ui/heading/heading";
 
 export default function Work() {
   return (

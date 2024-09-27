@@ -4,9 +4,9 @@ import { links } from "@/data/nav-links";
 import useScrollSection from "@/hooks/useSectionScroll";
 import { styles } from "@/utils/cn";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BiMenu } from "react-icons/bi";
-import ThemeToggle from "../core/theme-toggle/ThemeToggle";
+import ThemeToggle from "../ui/theme-toggle/ThemeToggle";
 
 export default function Navbar() {
   const [openNav, setOpenNav] = useState(false);

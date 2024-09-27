@@ -1,5 +1,7 @@
+import { shortId } from "@/utils/generate-shortid";
+
 type Experience = {
-  id: number;
+  id: string;
   date: string;
   role: string;
   company: string;
@@ -11,7 +13,7 @@ type Experience = {
 
 export const experience: Experience = [
   {
-    id: 2,
+    id: shortId(),
     date: "January 2023 - February 2024",
     role: "React Developer",
     website: "https://www.excelbd.com/",
@@ -21,7 +23,7 @@ export const experience: Experience = [
       "I've engaged in frontend development across multiple projects, employing React.js as the primary framework. Within these endeavors, I've played a pivotal role in contributing to various website projects, leveraging my expertise in React.js to enhance functionality and user experience. My focus remains steadfast on delivering high-quality UI/UX designs while optimizing performance for optimal user satisfaction.",
   },
   {
-    id: 3,
+    id: shortId(),
     date: "March 2024 - August 2024",
     role: "React Developer",
     company: "Blackrock IT Solutions (Contract)",

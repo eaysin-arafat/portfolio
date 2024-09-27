@@ -1,6 +1,6 @@
 import { blogs } from "@/data/blog";
 import Image from "next/image";
-import Heading from "../core/heading/heading";
+import Heading from "../ui/heading/heading";
 
 export default function Blog() {
   return (

@@ -1,5 +1,7 @@
+import { shortId } from "@/utils/generate-shortid";
+
 export type Portfolio = {
-  id: number;
+  id: string;
   title: string;
   subtitle: string;
   client: string;
@@ -15,7 +17,7 @@ export type Portfolio = {
 
 export const portfolio: Portfolio = [
   {
-    id: 0,
+    id: shortId(),
     title: "React-form-interactions",
     subtitle: "A React Form State and Validation Library",
     client: "Personal Project",
@@ -33,7 +35,7 @@ export const portfolio: Portfolio = [
       "https://www.npmjs.com/package/react-form-interactions?activeTab=readme",
   },
   {
-    id: 1,
+    id: shortId(),
     title: "TUSO",
     subtitle:
       "TUSO is a platform for reporting, managing, and resolving system issues, featuring secure user authentication, real-time notifications, and an integrated Remote Desktop Protocol (RDP) for live troubleshooting.",
@@ -96,7 +98,7 @@ export const portfolio: Portfolio = [
     liveLink: "",
   },
   {
-    id: 2,
+    id: shortId(),
     title: "SmartCare Pro",
     subtitle:
       "Carepro is a government-sponsored healthcare system designed to streamline patient management, treatment tracking, and doctor-patient interactions.",
@@ -183,7 +185,7 @@ export const portfolio: Portfolio = [
       "https://youtube.com/playlist?list=PLKI8pcPmyPbeK6LZBqhcXy4xHgIgxrfxF&si=GC3HC8EG1F-W145u",
   },
   {
-    id: 6,
+    id: shortId(),
     title: "HybridChart",
     subtitle: "Healthcare System",
     description: [
@@ -199,7 +201,7 @@ export const portfolio: Portfolio = [
     liveLink: "",
   },
   {
-    id: 7,
+    id: shortId(),
     title: "TechConnect",
     subtitle: "Employee Management System",
     description: [
@@ -215,7 +217,7 @@ export const portfolio: Portfolio = [
     liveLink: "",
   },
   {
-    id: 3,
+    id: shortId(),
     title: "Ecommarce Platform",
     subtitle:
       "an online destination where buyers shop for goods and sellers offer products and services.",
@@ -269,7 +271,7 @@ export const portfolio: Portfolio = [
     liveLink: "https://ecommarce-client.vercel.app/",
   },
   {
-    id: 4,
+    id: shortId(),
     title: "js-utility",
     subtitle:
       "A modern JavaScript utility library delivering modularity, performance & extras",
@@ -287,7 +289,7 @@ export const portfolio: Portfolio = [
     liveLink: "",
   },
   {
-    id: 5,
+    id: shortId(),
     title: "File Drive",
     subtitle: "a comprehensive file management platform",
     client: "Personal Project",

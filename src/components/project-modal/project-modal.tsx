@@ -4,7 +4,6 @@ import { portfolio } from "@/data/portfolio";
 import { styles } from "@/utils/cn";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { FaExternalLinkAlt, FaGithub, FaYoutube } from "react-icons/fa";
 import {
@@ -13,12 +12,10 @@ import {
 } from "react-icons/md";
 
 type PortfolioModalProps = {
-  projectId: number | null; // Accept null as a valid value
+  projectId: string; // Accept null as a valid value
 };
 
 export default function PortfolioModal({ projectId }: PortfolioModalProps) {
-  const router = useRouter();
-
   const [currentImage, setCurrentImage] = React.useState<number>(0);
 
   if (projectId === null) {
@@ -26,7 +23,7 @@ export default function PortfolioModal({ projectId }: PortfolioModalProps) {
     return <div>Project ID not provided.</div>;
   }
 
-  const project = portfolio[projectId];
+  const project = portfolio.find((p) => p.id === projectId);
   const goToPreviousImage = () => {
     const newIndex =
       (currentImage - 1 + (project?.image?.length || 0)) %
