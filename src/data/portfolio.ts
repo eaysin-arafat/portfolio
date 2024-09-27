@@ -34,15 +34,15 @@ export const portfolio: Portfolio = [
   },
   {
     id: 1,
-    title: "Help Desk",
+    title: "TUSO",
     subtitle:
-      "The process of reporting, managing, and resolving system issues efficiently",
+      "TUSO is a platform for reporting, managing, and resolving system issues, featuring secure user authentication, real-time notifications, and an integrated Remote Desktop Protocol (RDP) for live troubleshooting.",
     client: "Excel Technologies Ltd.",
     date: "March 15, 2024",
     category: "REACTJS",
     description: [
-      "HelpDesk is a robust system issue tracking platform designed to streamline the process of reporting, managing, and resolving system issues efficiently. With HelpDesk, users can easily report system issues they encounter, while support staff can effectively track, prioritize, and resolve these issues in a timely manner. The platform provides a user-friendly interface for both users and support staff, ensuring seamless communication and collaboration throughout the issue resolution process.",
-      "Developed a problem management system adaptable for various projects or institutions Implemented role-based relationships to facilitate efficient problem resolution, ensuring the right individuals have appropriate access levels. HelpDesk features a secure user authentication system, allowing users to register, log in, and manage their accounts securely. This ensures that only authorized users can access the platform and report system issues. Users can create tickets to report system issues effortlessly. The ticket creation process is user-friendly, allowing users to provide detailed descriptions, screenshots, and other relevant information to help support staff understand and address the reported issues effectively.",
+      "Tuso is a robust system issue tracking platform designed to streamline the process of reporting, managing, and resolving system issues efficiently. With Tuso, users can easily report system issues they encounter, while support staff can effectively track, prioritize, and resolve these issues in a timely manner. The platform provides a user-friendly interface for both users and support staff, ensuring seamless communication and collaboration throughout the issue resolution process.",
+      "Developed a problem management system adaptable for various projects or institutions Implemented role-based relationships to facilitate efficient problem resolution, ensuring the right individuals have appropriate access levels. Tuso features a secure user authentication system, allowing users to register, log in, and manage their accounts securely. This ensures that only authorized users can access the platform and report system issues. Users can create tickets to report system issues effortlessly. The ticket creation process is user-friendly, allowing users to provide detailed descriptions, screenshots, and other relevant information to help support staff understand and address the reported issues effectively.",
       "Support staff can manage tickets efficiently through the intuitive support dashboard. They can view, assign, prioritize, and track tickets based on their status and severity, ensuring that critical issues are addressed promptly.",
       "Support staff can communicate with users, provide updates, and resolve reported issues directly within the platform. This streamlines the issue resolution process and ensures clear communication between users and support staff throughout the entire process.",
       "Admins have access to administrative features, allowing them to manage users, configure system settings, and monitor system performance. This ensures that the platform operates smoothly and efficiently.",
@@ -99,7 +99,7 @@ export const portfolio: Portfolio = [
     id: 2,
     title: "SmartCare Pro",
     subtitle:
-      "Features to manage medical treatments, patient records, and doctor interactions",
+      "Carepro is a government-sponsored healthcare system designed to streamline patient management, treatment tracking, and doctor-patient interactions.",
     description: [
       "Contributed to the development of a government-sponsored healthcare ecosystem project within a collaborative team environment. Played a key role in designing and implementing features to manage medical treatments, patient records, and doctor interactions. Facilitated the integration of diverse medical facilities under different departments.",
       "Collaborated effectively with team members and stakeholders to meet project objectives and comply with government regulations.",
@@ -182,7 +182,38 @@ export const portfolio: Portfolio = [
     externalProjectDetailLink:
       "https://youtube.com/playlist?list=PLKI8pcPmyPbeK6LZBqhcXy4xHgIgxrfxF&si=GC3HC8EG1F-W145u",
   },
-
+  {
+    id: 6,
+    title: "HybridChart",
+    subtitle: "Healthcare System",
+    description: [
+      "HybridChart is an application designed to help healthcare providers manage patient data, schedules, and treatment plans.",
+      "It aims to improve workflow efficiency by offering tools for real-time collaboration between healthcare staff.",
+    ],
+    client: "Blackrock IT Solutions",
+    date: "",
+    category: "REACTJS",
+    image: [],
+    technologies: ["JavaScript", "React Js", "Redux Toolkit", "Scss"],
+    githubLink: "",
+    liveLink: "",
+  },
+  {
+    id: 7,
+    title: "TechConnect",
+    subtitle: "Employee Management System",
+    description: [
+      "TechConnect is an employee management platform that helps organizations track employee performance, generate reports, and manage internal communication efficiently.",
+      "It provides a detailed dashboard for managers to monitor team productivity.",
+    ],
+    client: "Blackrock IT Solutions",
+    date: "",
+    category: "REACTJS",
+    image: [],
+    technologies: ["JavaScript", "React Js", "Redux Toolkit", "Scss"],
+    githubLink: "",
+    liveLink: "",
+  },
   {
     id: 3,
     title: "Ecommarce Platform",
